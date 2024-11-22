@@ -1,12 +1,25 @@
 # import os
 from huggingface_hub import hf_hub_download
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 from .utils import process_large_image
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://fp-ml-waste-track.vercel.app",
+        "https://fldqzq-7860.csb.app",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 REPO_ID = "rasyadlubisdev/waste-classifier"
 FILENAME = "waste_classification_cnn_model_HybridModel_WS.h5"
