@@ -1,0 +1,30 @@
+# Docker files
+*.pid
+*.log
+docker-compose.override.yml
+
+# Python files
+*.pyc
+*.pyo
+__pycache__/
+venv/
+.env/
+.env.*
+
+# Model files (only if not needed)
+*.h5
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Gradio or Streamlit cache
+gradio/
+.streamlit/
+
+./.git/objects/*
+./.git/objects/9a/0baa244f3fcfbd60ee92979e5594fe7535579a

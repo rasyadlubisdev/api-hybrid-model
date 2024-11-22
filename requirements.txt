@@ -1,0 +1,10 @@
+fastapi
+tensorflow
+tensorflow-cpu
+pillow
+h5py
+numpy
+matplotlib
+uvicorn
+python-multipart
+huggingface_hub
